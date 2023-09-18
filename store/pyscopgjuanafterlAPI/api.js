@@ -26,6 +26,24 @@ function api_v1_azul_partial_update(payload) {
 function api_v1_azul_destroy(payload) {
   return pyscopgjuanafterlAPI.delete(`/api/v1/azul/${payload.id}/`)
 }
+function api_v1_dog_list(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/dog/`)
+}
+function api_v1_dog_create(payload) {
+  return pyscopgjuanafterlAPI.post(`/api/v1/dog/`, payload)
+}
+function api_v1_dog_retrieve(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/dog/${payload.id}/`)
+}
+function api_v1_dog_update(payload) {
+  return pyscopgjuanafterlAPI.put(`/api/v1/dog/${payload.id}/`, payload)
+}
+function api_v1_dog_partial_update(payload) {
+  return pyscopgjuanafterlAPI.patch(`/api/v1/dog/${payload.id}/`, payload)
+}
+function api_v1_dog_destroy(payload) {
+  return pyscopgjuanafterlAPI.delete(`/api/v1/dog/${payload.id}/`)
+}
 function api_v1_juan_list(payload) {
   return pyscopgjuanafterlAPI.get(`/api/v1/juan/`)
 }
@@ -97,6 +115,12 @@ export const apiService = {
   api_v1_azul_update,
   api_v1_azul_partial_update,
   api_v1_azul_destroy,
+  api_v1_dog_list,
+  api_v1_dog_create,
+  api_v1_dog_retrieve,
+  api_v1_dog_update,
+  api_v1_dog_partial_update,
+  api_v1_dog_destroy,
   api_v1_juan_list,
   api_v1_juan_create,
   api_v1_juan_retrieve,
