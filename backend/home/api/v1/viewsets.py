@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Juan,Azul,Dog,Azul,Dog,Juan,Azul,Dog,Juan
-from .serializers import JuanSerializer,AzulSerializer,DogSerializer,AzulSerializer,DogSerializer,JuanSerializer,AzulSerializer,DogSerializer,JuanSerializer
+from home.models import Juan,Azul,Dog,Cat,Azul,Cat,Dog,Juan,Azul,Cat,Dog,Juan
+from .serializers import JuanSerializer,AzulSerializer,DogSerializer,CatSerializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -47,3 +47,8 @@ class DogViewSet(viewsets.ModelViewSet):
     serializer_class = DogSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Dog.objects.all()
+
+class CatViewSet(viewsets.ModelViewSet):
+    serializer_class = CatSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Cat.objects.all()

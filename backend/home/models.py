@@ -11,3 +11,7 @@ class Dog(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
     owner = models.ForeignKey("users.User",on_delete=models.CASCADE,related_name="dog_owner",)
+class Cat(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=255,)
+    enemy = models.ForeignKey("home.Dog",on_delete=models.CASCADE,related_name="cat_enemy",)

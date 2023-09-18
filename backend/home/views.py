@@ -1,4 +1,4 @@
-from .models import Azul, Juan
+from .models import Juan, Dog, Azul
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 
