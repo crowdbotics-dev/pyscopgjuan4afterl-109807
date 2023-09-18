@@ -7,3 +7,7 @@ class Azul(models.Model):
     'Generated Model'
     bvbv = models.BigIntegerField()
     mkmk = models.ForeignKey("home.Juan",on_delete=models.CASCADE,related_name="azul_mkmk",)
+class Dog(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=255,)
+    owner = models.ForeignKey("users.User",on_delete=models.CASCADE,related_name="dog_owner",)
