@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Juan,Azul,Dog,Cat,TestModel,TestModel2,Azul,Cat,Dog,Juan,TestModel,TestModel2,Azul,Cat,Dog,Juan,TestModel,TestModel2
-from .serializers import JuanSerializer,AzulSerializer,DogSerializer,CatSerializer,TestModelSerializer,TestModel2Serializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,TestModelSerializer,TestModel2Serializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,TestModelSerializer,TestModel2Serializer
+from home.models import Juan,Azul,Dog,Cat,TestModel,TestModel2,TestModel3,TestModel4,Azul,Cat,Dog,Juan,TestModel,TestModel2,TestModel3,TestModel4,Azul,Cat,Dog,Juan,TestModel,TestModel2,TestModel3,TestModel4
+from .serializers import JuanSerializer,AzulSerializer,DogSerializer,CatSerializer,TestModelSerializer,TestModel2Serializer,TestModel3Serializer,TestModel4Serializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,TestModelSerializer,TestModel2Serializer,TestModel3Serializer,TestModel4Serializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,TestModelSerializer,TestModel2Serializer,TestModel3Serializer,TestModel4Serializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -62,3 +62,13 @@ class TestModel2ViewSet(viewsets.ModelViewSet):
     serializer_class = TestModel2Serializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = TestModel2.objects.all()
+
+class TestModel3ViewSet(viewsets.ModelViewSet):
+    serializer_class = TestModel3Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = TestModel3.objects.all()
+
+class TestModel4ViewSet(viewsets.ModelViewSet):
+    serializer_class = TestModel4Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = TestModel4.objects.all()
