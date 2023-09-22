@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Juan,Azul,Dog,Cat,Azul,Cat,Dog,Juan,Azul,Cat,Dog,Juan
-from .serializers import JuanSerializer,AzulSerializer,DogSerializer,CatSerializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer
+from home.models import Juan,Azul,Dog,Cat,TestModel,TestModel2,Azul,Cat,Dog,Juan,TestModel,TestModel2,Azul,Cat,Dog,Juan,TestModel,TestModel2
+from .serializers import JuanSerializer,AzulSerializer,DogSerializer,CatSerializer,TestModelSerializer,TestModel2Serializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,TestModelSerializer,TestModel2Serializer,AzulSerializer,CatSerializer,DogSerializer,JuanSerializer,TestModelSerializer,TestModel2Serializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -52,3 +52,13 @@ class CatViewSet(viewsets.ModelViewSet):
     serializer_class = CatSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Cat.objects.all()
+
+class TestModelViewSet(viewsets.ModelViewSet):
+    serializer_class = TestModelSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = TestModel.objects.all()
+
+class TestModel2ViewSet(viewsets.ModelViewSet):
+    serializer_class = TestModel2Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = TestModel2.objects.all()

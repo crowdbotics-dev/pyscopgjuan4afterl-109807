@@ -16,3 +16,10 @@ class Cat(models.Model):
     'Generated Model'
     name = models.CharField(max_length=255,)
     enemy = models.ForeignKey("home.Dog",on_delete=models.CASCADE,related_name="cat_enemy",)
+class TestModel(models.Model):
+    'Generated Model'
+    age = models.BigIntegerField()
+class TestModel2(models.Model):
+    'Generated Model'
+    name = models.CharField(max_length=255,)
+    enemy = models.ForeignKey("home.TestModel",on_delete=models.CASCADE,related_name="testmodel2_enemy",)
