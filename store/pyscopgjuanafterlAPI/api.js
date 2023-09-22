@@ -104,6 +104,45 @@ function api_v1_mojo_destroy(payload) {
 function api_v1_signup_create(payload) {
   return pyscopgjuanafterlAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_testmodel_list(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/testmodel/`)
+}
+function api_v1_testmodel_create(payload) {
+  return pyscopgjuanafterlAPI.post(`/api/v1/testmodel/`, payload)
+}
+function api_v1_testmodel_retrieve(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/testmodel/${payload.id}/`)
+}
+function api_v1_testmodel_update(payload) {
+  return pyscopgjuanafterlAPI.put(`/api/v1/testmodel/${payload.id}/`, payload)
+}
+function api_v1_testmodel_partial_update(payload) {
+  return pyscopgjuanafterlAPI.patch(`/api/v1/testmodel/${payload.id}/`, payload)
+}
+function api_v1_testmodel_destroy(payload) {
+  return pyscopgjuanafterlAPI.delete(`/api/v1/testmodel/${payload.id}/`)
+}
+function api_v1_testmodel2_list(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/testmodel2/`)
+}
+function api_v1_testmodel2_create(payload) {
+  return pyscopgjuanafterlAPI.post(`/api/v1/testmodel2/`, payload)
+}
+function api_v1_testmodel2_retrieve(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/testmodel2/${payload.id}/`)
+}
+function api_v1_testmodel2_update(payload) {
+  return pyscopgjuanafterlAPI.put(`/api/v1/testmodel2/${payload.id}/`, payload)
+}
+function api_v1_testmodel2_partial_update(payload) {
+  return pyscopgjuanafterlAPI.patch(
+    `/api/v1/testmodel2/${payload.id}/`,
+    payload
+  )
+}
+function api_v1_testmodel2_destroy(payload) {
+  return pyscopgjuanafterlAPI.delete(`/api/v1/testmodel2/${payload.id}/`)
+}
 function rest_auth_login_create(payload) {
   return pyscopgjuanafterlAPI.post(`/rest-auth/login/`, payload)
 }
@@ -177,6 +216,18 @@ export const apiService = {
   api_v1_mojo_partial_update,
   api_v1_mojo_destroy,
   api_v1_signup_create,
+  api_v1_testmodel_list,
+  api_v1_testmodel_create,
+  api_v1_testmodel_retrieve,
+  api_v1_testmodel_update,
+  api_v1_testmodel_partial_update,
+  api_v1_testmodel_destroy,
+  api_v1_testmodel2_list,
+  api_v1_testmodel2_create,
+  api_v1_testmodel2_retrieve,
+  api_v1_testmodel2_update,
+  api_v1_testmodel2_partial_update,
+  api_v1_testmodel2_destroy,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
