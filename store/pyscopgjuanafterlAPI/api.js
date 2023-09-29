@@ -104,6 +104,24 @@ function api_v1_mojo_destroy(payload) {
 function api_v1_signup_create(payload) {
   return pyscopgjuanafterlAPI.post(`/api/v1/signup/`, payload)
 }
+function api_v1_testdata_list(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/testdata/`)
+}
+function api_v1_testdata_create(payload) {
+  return pyscopgjuanafterlAPI.post(`/api/v1/testdata/`, payload)
+}
+function api_v1_testdata_retrieve(payload) {
+  return pyscopgjuanafterlAPI.get(`/api/v1/testdata/${payload.id}/`)
+}
+function api_v1_testdata_update(payload) {
+  return pyscopgjuanafterlAPI.put(`/api/v1/testdata/${payload.id}/`, payload)
+}
+function api_v1_testdata_partial_update(payload) {
+  return pyscopgjuanafterlAPI.patch(`/api/v1/testdata/${payload.id}/`, payload)
+}
+function api_v1_testdata_destroy(payload) {
+  return pyscopgjuanafterlAPI.delete(`/api/v1/testdata/${payload.id}/`)
+}
 function api_v1_testmodel_list(payload) {
   return pyscopgjuanafterlAPI.get(`/api/v1/testmodel/`)
 }
@@ -258,6 +276,12 @@ export const apiService = {
   api_v1_mojo_partial_update,
   api_v1_mojo_destroy,
   api_v1_signup_create,
+  api_v1_testdata_list,
+  api_v1_testdata_create,
+  api_v1_testdata_retrieve,
+  api_v1_testdata_update,
+  api_v1_testdata_partial_update,
+  api_v1_testdata_destroy,
   api_v1_testmodel_list,
   api_v1_testmodel_create,
   api_v1_testmodel_retrieve,
